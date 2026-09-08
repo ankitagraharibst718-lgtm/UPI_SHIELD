@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UPI Shield</title>
+
+    <link rel="stylesheet"
+          href="../static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🛡️ UPI Shield</h1>
+
+    <p>
+        Contextual Digital Payment Scam Detector
+    </p>
+    <div class="sample-buttons">
+
+    <button type="button" onclick="loadSample('electricity')">
+        ⚡ Electricity Scam
+    </button>
+
+    <button type="button" onclick="loadSample('refund')">
+        💰 Fake Refund
+    </button>
+
+    <button type="button" onclick="loadSample('kyc')">
+        🪪 KYC Scam
+    </button>
+
+    <button type="button" onclick="loadSample('safe')">
+        ✅ Safe Message
+    </button>
+
+</div>
+
+    <textarea
+        id="message"
+        placeholder="Paste SMS, WhatsApp message or payment note here..."
+    ></textarea>
+
+    <button onclick="analyzeMessage()">
+        🔍 Analyze Message
+    </button>
+
+    <div id="result" class="result">
+
+        <h2 id="level"></h2>
+
+        <div class="score">
+            Threat Score:
+            <span id="score">0</span>/100
+        </div>
+        <div class="threat-meter">
+    <div id="threatBar" class="threat-bar"></div>
+</div>
+
+        <h3>🚨 Detected Triggers</h3>
+
+        <ul id="triggers"></ul>
+        <!-- WHY RISKY -->
+
+<div class="why-risky">
+
+    <h3>💡 Why is this risky?</h3>
+
+    <ul id="evidenceList">
+    </ul>
+
+</div>
+
+        <div class="warning">
+
+            <h3>🇬🇧 Safety Warning</h3>
+
+            <p id="english"></p>
+
+        </div>
+
+        <div class="warning">
+
+            <h3>🇮🇳 सुरक्षा चेतावनी</h3>
+
+            <p id="hindi"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../static/script.js"></script>
+
+</body>
+</html>
